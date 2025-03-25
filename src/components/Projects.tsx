@@ -9,14 +9,14 @@ export const projects = [
   {
     title: 'Nem Mo E-commerce',
     description:
-      'A full-stack e-commerce application built with PHP, MySQL, and Bootstrap.',
+      'Developed an online shopping platform where users can browse products, add items to the cart, place orders, and complete secure payments via VNPay. Admins can manage products, categories, and orders.',
     tech: 'PHP',
     link: 'https://shop.mihi.id.vn/',
   },
   {
     title: `Mihi's Blog`,
     description:
-      'A full-stack blog application built with React, Node.js, and MongoDB.',
+      'Built a full-stack blogging platform where users can create, edit, view, and delete blog posts.',
     tech: 'React',
     link: 'https://mihi-mern-blog.onrender.com/',
   },

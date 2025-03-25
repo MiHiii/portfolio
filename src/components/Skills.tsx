@@ -9,11 +9,12 @@ const skills = [
   'HTML',
   'CSS',
   'TailwindCSS',
-  'NestJS',
+  // 'NestJS',
   'ReactJS',
   'NodeJS',
   'ExpressJS',
   'MongoDB',
+  'Antd',
 ];
 
 export const Skills = () => {

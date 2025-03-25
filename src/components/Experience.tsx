@@ -13,7 +13,7 @@ const jobs = [
     logo: '/company.svg', // TODO: Replace with actual logo
     duration: 'Aug 2023 - Present',
     description:
-      'Edited video for JLPT N1, N2, and N3 courses, designed UX/UI interfaces using Figma, and created landing pages for various campaigns.',
+      'Edited video for JLPT N1, N2, and N3 courses, designed UX/UI interfaces using Figma, and created landing pages for major campaigns.',
     link: 'https://riki.edu.vn',
     images: ['/riki.png'],
   },

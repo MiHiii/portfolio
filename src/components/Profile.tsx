@@ -56,10 +56,10 @@ export const Profile = () => {
             {/* or link to schedule a meeting using Calendly or Cal*/}
             <Link
               target='_blank'
-              href='https://zalo.me/0372867296'
+              href='https://drive.google.com/file/d/1vSsjdGKbhsJSEE5nveKOOu_qrzfrBbgo/view?usp=sharing'
               className='font-semibold'
             >
-              CONTACT ME
+              VIEW RESUME
             </Link>
           </Button>
           <div className='mt-4 flex flex-col space-y-2 border-t border-border pt-4 w-full'>

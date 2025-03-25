@@ -5,12 +5,19 @@ import { Card, CardContent } from '@/components/ui/card';
 const educations = [
   {
     school: 'FPT Polytechnic College',
-    major: 'Web Development',
-    duration: 'Jul 2023 - Present',
-    gpa: '3.5/4.0',
+    major: 'Information Technology',
+    duration: 'Jul 2023 - Aug 2025',
+    gpa: '9/10',
+  },
+
+  {
+    school: 'Kyushu Ryukoku Junior College - 九州龍谷短期大学',
+    major: 'Media Course',
+    duration: '2021',
   },
   {
-    school: 'CODO Foreign Language and Tourism School - CODO 外語観光専門学校',
+    school:
+      'CODO College Of Foreign Language and Tourism - CODO 外語観光専門学校',
     major: 'Japanese Language',
     duration: '2020',
   },
