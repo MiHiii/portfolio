@@ -15,8 +15,8 @@ export const Awards = () => {
       <Card className='mb-6'>
         <CardContent className='pt-6'>
           <ul className='space-y-2'>
-            {awards.map((i) => (
-              <li key={i} className='border-b last:border-b-0 pb-3 last:pb-0 flex flex-row items-center gap-10'>
+            {awards.map((i, index) => (
+              <li key={index} className='border-b last:border-b-0 pb-3 last:pb-0 flex flex-row items-center gap-10'>
                 {/*Honors & Awards Details */}
                 <div className='flex items-center space-x-4'>
                   <div>
