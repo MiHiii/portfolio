@@ -17,12 +17,12 @@ export default function Home() {
           <main className='md:col-span-2'>
             {/* About Me Section */}
             <AboutMe />
+            {/* Experience Section */}
+            <Experience />
             {/* Education Section */}
             <Education />
             {/* Projects Section */}
             <Projects />
-            {/* Experience Section */}
-            <Experience />
             {/* Certifications Section */}
             <Certifications />
             {/* Honors & Awards Section */}

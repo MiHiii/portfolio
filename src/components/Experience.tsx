@@ -8,7 +8,7 @@ import { JobImages } from '@/components/JobImages';
 
 const jobs = [
   {
-    role: 'Bridge System Engineer (BrSE)',
+    role: 'Bridge Software Engineer (BrSE)',
     company: 'Viet Nhat General Joint Stock Company (VINICORP)',
     logo: '/vinicorp-logo.png',
     duration: 'May 2025 - Present',

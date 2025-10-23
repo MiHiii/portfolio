@@ -8,9 +8,9 @@ export const AboutMe = () => {
       </CardHeader>
       <CardContent>
         <p className='text-muted-foreground'>
-          I’m a Bridge System Engineer (BrSE) with a background in web development and five years of study experience in
-          Japan, bridging communication between Japanese clients and development teams to deliver reliable, high-quality
-          systems.
+          I’m a Bridge Software Engineer (BrSE) with a background in web development and five years of study experience
+          in Japan, bridging communication between Japanese clients and development teams to deliver reliable,
+          high-quality systems.
         </p>
       </CardContent>
     </Card>
