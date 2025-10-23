@@ -40,12 +40,8 @@ export const Profile = () => {
               className='rounded-full size-12 md:w-full h-auto object-cover border-2'
             />
             <div className='flex flex-col items-start justify-center'>
-              <h1 className='font-bold md:mt-4 text-xl md:text-2xl'>
-                Pham Minh Hieu
-              </h1>
-              <p className='text-sm md:text-base text-muted-foreground'>
-                Web Developer
-              </p>
+              <h1 className='font-bold md:mt-4 text-xl md:text-2xl'>Pham Minh Hieu</h1>
+              <p className='text-sm md:text-base text-muted-foreground'>BrSE</p>
             </div>
           </div>
           <p className='mt-2 text-start text-sm text-muted-foreground'>
@@ -57,8 +53,7 @@ export const Profile = () => {
             <Link
               target='_blank'
               href='https://drive.google.com/file/d/1vSsjdGKbhsJSEE5nveKOOu_qrzfrBbgo/view?usp=sharing'
-              className='font-semibold'
-            >
+              className='font-semibold'>
               VIEW RESUME
             </Link>
           </Button>
@@ -72,8 +67,7 @@ export const Profile = () => {
                   href={s.link}
                   target='_blank'
                   aria-label={`${s.name} Logo`}
-                  className='cursor-pointer flex items-center gap-2 group'
-                >
+                  className='cursor-pointer flex items-center gap-2 group'>
                   {s.icon}
                   <p className='text-sm text-muted-foreground group-hover:text-primary transition-color duration-200 ease-linear'>
                     /{username}

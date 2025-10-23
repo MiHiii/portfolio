@@ -8,10 +8,25 @@ import { JobImages } from '@/components/JobImages';
 
 const jobs = [
   {
+    role: 'Bridge System Engineer (BrSE)',
+    company: 'Viet Nhat General Joint Stock Company (VINICORP)',
+    logo: '/vinicorp-logo.png',
+    duration: 'May 2025 - Present',
+    description: (
+      <>
+        Bridged communication between Japanese clients and Vietnamese developers in the <strong>banking domain</strong>,
+        translated system specifications, reviewed technical designs, managed schedules, and reported project progress
+        to clients.
+      </>
+    ),
+    link: 'https://www.vinicorp.com.vn/home',
+    images: ['/vinicorp.jpg'],
+  },
+  {
     role: 'Creator', // TODO: Replace with actual role
     company: 'RIKI EDU TRADE JSC', // TODO: Replace with actual company name
-    logo: '/company.svg', // TODO: Replace with actual logo
-    duration: 'Aug 2023 - Present',
+    logo: '/riki-logo.png', // TODO: Replace with actual logo
+    duration: 'Aug 2023 - May 2025',
     description:
       'Edited video for JLPT N1, N2, and N3 courses, designed UX/UI interfaces using Figma, and created landing pages for major campaigns.',
     link: 'https://riki.edu.vn',
@@ -48,12 +63,7 @@ export const Experience = () => {
                 </p>
                 <p className='text-sm mt-2'>{j.description}</p>
                 {/* Job Images */}
-                <JobImages
-                  role={j.role}
-                  link={j.link}
-                  images={j.images}
-                  duration={j.duration}
-                />
+                <JobImages role={j.role} link={j.link} images={j.images} duration={j.duration} />
               </li>
             ))}
           </ul>

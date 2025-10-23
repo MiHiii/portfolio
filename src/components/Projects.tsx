@@ -7,24 +7,23 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export const projects = [
   {
-    title: 'Nem Mo E-commerce',
+    title: 'Vinaside',
     description:
-      'Developed an online shopping platform where users can browse products, add items to the cart, place orders, and complete secure payments via VNPay. Admins can manage products, categories, and orders.',
-    tech: 'PHP',
-    link: 'https://shop.mihi.id.vn/',
+      'Developed a full-featured hotel booking system with modules for property management, online booking, real-time chat, and secure payments via VNPay.',
+    tech: 'NestJS',
+    link: 'https://github.com/MiHiii/vinaside-backend',
   },
   {
     title: `Mihi's Blog`,
-    description:
-      'Built a full-stack blogging platform where users can create, edit, view, and delete blog posts.',
+    description: 'Built a full-stack blogging platform where users can create, edit, view, and delete blog posts.',
     tech: 'React',
-    link: 'https://mihi-mern-blog.onrender.com/',
+    link: 'https://github.com/MiHiii/blog-step-by-step',
   },
 ];
 
 const techColors = {
   React: 'bg-green-500',
-  PHP: 'bg-blue-500',
+  NestJS: 'bg-blue-500',
 };
 
 export const Projects = () => {
@@ -36,34 +35,20 @@ export const Projects = () => {
           <Card key={i}>
             <CardContent className='pt-6 h-full'>
               <div className='flex flex-col h-full'>
-                <Link
-                  href={p.link}
-                  target='_blank'
-                  className='font-semibold text-primary hover:underline'
-                >
+                <Link href={p.link} target='_blank' className='font-semibold text-primary hover:underline'>
                   {p.title}
                 </Link>
-                <p className='text-sm text-muted-foreground mt-1 mb-4'>
-                  {p.description}
-                </p>
+                <p className='text-sm text-muted-foreground mt-1 mb-4'>{p.description}</p>
                 <div className='mt-auto flex items-center justify-between'>
                   <div className='flex items-center space-x-2'>
-                    <div
-                      className={cn(
-                        'size-4 rounded-full',
-                        techColors[p.tech as keyof typeof techColors],
-                      )}
-                    />
-                    <span className='text-xs font-medium text-muted-foreground'>
-                      {p.tech}
-                    </span>
+                    <div className={cn('size-4 rounded-full', techColors[p.tech as keyof typeof techColors])} />
+                    <span className='text-xs font-medium text-muted-foreground'>{p.tech}</span>
                   </div>
                   <Link
                     href={p.link}
                     target='_blank'
-                    className='flex items-center gap-2 text-sm text-primary hover:underline'
-                  >
-                    View Project
+                    className='flex items-center gap-2 text-sm text-primary hover:underline'>
+                    Github
                     <ExternalLink className='inline-block size-3' />
                   </Link>
                 </div>

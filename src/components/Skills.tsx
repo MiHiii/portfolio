@@ -4,17 +4,20 @@ import { Badge } from '@/components/ui/badge';
 const skills = [
   'TypeScript',
   'JavaScript',
-  'PHP',
-  'MySQL',
-  'HTML',
-  'CSS',
-  'TailwindCSS',
-  // 'NestJS',
+  'NestJS',
+  'Java',
+  'Spring Boot',
+  'PostgreSQL',
+  'Docker',
+  'Redis',
   'ReactJS',
   'NodeJS',
-  'ExpressJS',
   'MongoDB',
-  'Antd',
+  'HTML',
+  'CSS',
+  'PHP',
+  'MySQL',
+  'TailwindCSS',
 ];
 
 export const Skills = () => {

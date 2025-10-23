@@ -8,13 +8,9 @@ export const AboutMe = () => {
       </CardHeader>
       <CardContent>
         <p className='text-muted-foreground'>
-          I am a web development student passionate about building user-friendly
-          and accessible applications. I have a strong foundation in HTML, CSS,
-          PHP, and JavaScript and am actively working with React for frontend
-          development. Additionally, I am expanding my backend skills with
-          Node.js, Express, NestJS, and MongoDB. I am eager to apply my
-          knowledge to real-world projects, continuously improve my skills, and
-          collaborate on innovative solutions.
+          I’m a Bridge System Engineer (BrSE) with a background in web development and five years of study experience in
+          Japan, bridging communication between Japanese clients and development teams to deliver reliable, high-quality
+          systems.
         </p>
       </CardContent>
     </Card>
