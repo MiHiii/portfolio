@@ -17,12 +17,13 @@ import {
 
 interface JobImagesProps {
   role: string;
-  link: string;
+  link?: string;
   images: string[];
   duration: string;
+  visitLabel: string;
 }
 
-export const JobImages = ({ role, link, images, duration }: JobImagesProps) => {
+export const JobImages = ({ role, link, images, duration, visitLabel }: JobImagesProps) => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
@@ -52,14 +53,16 @@ export const JobImages = ({ role, link, images, duration }: JobImagesProps) => {
                 alt={`Project Image for ${role}`}
                 className='rounded-md border shadow-md object-cover'
               />
-              <Link
-                href={link}
-                target='_blank'
-                className='text-sm flex items-center justify-center text-blue-600 hover:underline mt-2'
-              >
-                Visit Company Site
-                <ExternalLink className='size-4 ml-2' />
-              </Link>
+              {link && (
+                <Link
+                  href={link}
+                  target='_blank'
+                  className='text-sm flex items-center justify-center text-blue-600 hover:underline mt-2'
+                >
+                  {visitLabel}
+                  <ExternalLink className='size-4 ml-2' />
+                </Link>
+              )}
             </div>
           </DialogContent>
         </Dialog>
