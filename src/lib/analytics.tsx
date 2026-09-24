@@ -7,7 +7,11 @@ const GoogleAnalytics = dynamic(() =>
 );
 
 export const Analytics = () => {
-  return (
-    <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID!} />
-  );
+  const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+
+  if (!gaId) {
+    return null;
+  }
+
+  return <GoogleAnalytics gaId={gaId} />;
 };

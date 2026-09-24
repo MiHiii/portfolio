@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import '@/app/globals.css';
 import { cn } from '@/lib/utils';
 import { geistSans, geistMono } from '@/app/fonts/fonts';
 import { Analytics } from '@/lib/analytics';
