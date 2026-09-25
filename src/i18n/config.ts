@@ -10,14 +10,14 @@ export function isLocale(value: string): value is Locale {
 
 // Vietnamese is temporarily disabled site-wide (route + language switcher).
 // Content/logic in content/vi.ts is kept as-is — to re-enable, add 'vi' back
-// here and set showLanguageSwitcher to true.
+// here; the switcher then shows all of enabledLocales automatically.
 export const enabledLocales: readonly Locale[] = ['en', 'ja'];
 
 export function isEnabledLocale(value: string): value is Locale {
   return (enabledLocales as readonly string[]).includes(value);
 }
 
-export const showLanguageSwitcher = false;
+export const showLanguageSwitcher = true;
 
 export const localeNames: Record<Locale, string> = {
   en: 'EN',

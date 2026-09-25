@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { locales, localeNames, type Locale } from '@/i18n/config';
+import { enabledLocales, localeNames, type Locale } from '@/i18n/config';
 import { cn } from '@/lib/utils';
 
 interface LanguageSwitcherProps {
@@ -11,7 +11,7 @@ interface LanguageSwitcherProps {
 export const LanguageSwitcher = ({ locale, label }: LanguageSwitcherProps) => {
   return (
     <nav aria-label={label} className='flex items-center gap-1 text-sm'>
-      {locales.map((l, i) => {
+      {enabledLocales.map((l, i) => {
         const isActive = l === locale;
         return (
           <span key={l} className='flex items-center'>
@@ -27,7 +27,7 @@ export const LanguageSwitcher = ({ locale, label }: LanguageSwitcherProps) => {
             >
               {localeNames[l]}
             </Link>
-            {i < locales.length - 1 && <span className='text-muted-foreground px-0.5'>|</span>}
+            {i < enabledLocales.length - 1 && <span className='text-muted-foreground px-0.5'>|</span>}
           </span>
         );
       })}
