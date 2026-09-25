@@ -7,7 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ResumeMenu } from '@/components/portfolio/ResumeMenu';
 import { LanguageSwitcher } from '@/components/portfolio/LanguageSwitcher';
 import type { ProfileContent, ResumeContent, UiContent } from '@/content/types';
-import type { Locale } from '@/i18n/config';
+import { showLanguageSwitcher, type Locale } from '@/i18n/config';
 
 const socialIcons: Record<string, React.ReactNode> = {
   GitHub: <FaGithub className='size-4' />,
@@ -61,9 +61,11 @@ export const Profile = ({ profile, resume, ui, locale }: ProfileProps) => {
               </Link>
             ))}
           </div>
-          <div className='mt-2 border-t border-border pt-4 w-full flex justify-center md:justify-start'>
-            <LanguageSwitcher locale={locale} label={ui.languageSwitcherLabel} />
-          </div>
+          {showLanguageSwitcher && (
+            <div className='mt-2 border-t border-border pt-4 w-full flex justify-center md:justify-start'>
+              <LanguageSwitcher locale={locale} label={ui.languageSwitcherLabel} />
+            </div>
+          )}
         </div>
       </CardContent>
     </Card>

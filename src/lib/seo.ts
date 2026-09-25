@@ -1,4 +1,4 @@
-import { locales, type Locale } from '@/i18n/config';
+import { enabledLocales, type Locale } from '@/i18n/config';
 
 export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://mihi.id.vn'
@@ -14,7 +14,7 @@ export function absoluteUrl(path: string): string {
 
 export function buildLanguageAlternates(path = ''): Record<string, string> {
   const alternates: Record<string, string> = {};
-  for (const locale of locales) {
+  for (const locale of enabledLocales) {
     alternates[locale] = absoluteUrl(localePath(locale, path));
   }
   alternates['x-default'] = absoluteUrl(localePath('en', path));

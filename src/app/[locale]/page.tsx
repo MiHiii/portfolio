@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-import { isLocale } from '@/i18n/config';
+import { isEnabledLocale } from '@/i18n/config';
 import { getPortfolioContent } from '@/content';
 import { Portfolio } from '@/components/portfolio/Portfolio';
 
@@ -11,7 +11,7 @@ export default async function PortfolioPage({
 }) {
   const { locale } = await params;
 
-  if (!isLocale(locale)) {
+  if (!isEnabledLocale(locale)) {
     notFound();
   }
 

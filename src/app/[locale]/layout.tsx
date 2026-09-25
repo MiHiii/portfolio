@@ -5,12 +5,12 @@ import '@/app/globals.css';
 import { cn } from '@/lib/utils';
 import { geistSans, geistMono } from '@/app/fonts/fonts';
 import { Analytics } from '@/lib/analytics';
-import { locales, isLocale, ogLocales, type Locale } from '@/i18n/config';
+import { enabledLocales, isEnabledLocale, ogLocales, type Locale } from '@/i18n/config';
 import { getPortfolioContent } from '@/content';
 import { siteUrl, localePath, absoluteUrl, buildLanguageAlternates } from '@/lib/seo';
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return enabledLocales.map((locale) => ({ locale }));
 }
 
 export const dynamicParams = false;
@@ -21,7 +21,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  if (!isLocale(locale)) {
+  if (!isEnabledLocale(locale)) {
     return {};
   }
 
@@ -43,7 +43,7 @@ export async function generateMetadata({
       url,
       siteName: content.profile.name,
       locale: ogLocales[locale],
-      alternateLocale: locales.filter((l) => l !== locale).map((l) => ogLocales[l]),
+      alternateLocale: enabledLocales.filter((l) => l !== locale).map((l) => ogLocales[l]),
       images: ['/thumbnail.png'],
       type: 'profile',
     },
@@ -67,7 +67,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!isLocale(locale)) {
+  if (!isEnabledLocale(locale)) {
     notFound();
   }
 
